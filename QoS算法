@@ -1,0 +1,61 @@
+Qos算法
+
+2021年4月8日
+9:49
+
+Qo S队列调度算法优化研究  王振宇 吉林农业大学
+
+WRR 算法，其未能对不同分组长度引入的不Qo S队列调度算法优化研究 公平性进行考虑，使得无法对高优先级队列的低时延
+要求提供保障，所以，本文将一种以分组长度与队列优先级为基础的 LI-WRR 算法予以提出，然后借助仿真实验对此算法的时延性能进行了检验，结果证明其能与 WFQ 算法几乎一致，但是在算法的实现复杂性上面却更低。
+
+
+视频监控智能检测系统检测队列调度算法的研究 2015 中国海洋大学 孟国栋
+
+来自 <http://cnki.huawei.com/kcms/detail/detail.aspx?recid=&FileName=1015713062.nh&DbName=CMFDLAST2016&DbCode=CMFD&uid=TFB0dENSb3N5K3NuTnozUHNFT216Y2E3dmhQWFFGM1FtQzVlanFZL2ZQYUJPbml3> ‘’
+
+
+FQ算法不能够提供高质量的调度服务,WFQ算法中实时性业务必须经过排队,时延较高,数据量过大或有突发流时会影响服务质量,甚至导致网络拥塞。本文在DiffServ模型的基础上,对基于GPS模型的WFQ算法进行了改进和优化,在WFQ算法的基础上,结合令牌桶技术和PQ算法,并采用权值动态调整策略,弥补了WFQ算法不能够区分实时性业务和非实时性业务的缺陷,并且能够提供稳定的服务速率,保障了调度的公平性和区分服务的特性。
+
+
+
+基于改进WRR算法的智能变电站站内通信队列调度研究 沈奕菲 2018
+
+来自 <http://cnki.huawei.com/kcms/detail/detail.aspx?recid=&FileName=JDQW201812012&DbName=CJFDLAST2018&DbCode=CJFQ&uid=TFB0dENSb3N5K3NuTnozUHNFT216Y2E3dmhQWFFGM1FtQzVlanFZL2ZQYUJPbml3> 
+
+
+DiffServ队列调度算法研究 
+ 江文静
+
+来自 <http://cnki.huawei.com/kcms/detail/61.1450.tp.20150223.1252.047.html?&uid=TFB0dENSb3N5K3NuTnozUHNFT216Y2E3dmhQWFFGM1FtQzVlanFZL2ZQYUJPbml3> 
+传统的IP网络是针对非实时数据传输而设计,提供"尽力而为"的服务,难以满足不同业务的服务质量要求。研究表明区分服务(Diff Serv)模型具有简单、有效、扩展性强等特点。它对业务流进行分类、整形使得不同类型业务数据在网络中得到不同服务。队列调度算法是实现区分服务的核心机制之一。文中分析了Diff Serv模型下常见的WRR和DWRR调度算法的优缺点,在DWRR算法的基础上提出一种改进的队列调度算法(VDWRR),同时将PRI(优先调度)算法与VDWRR算法相结合,很好地满足了业务的时延特性。
+
+
+
+S. Jain and S. Jain, "A Markov-Chain Model Based Study of Distributed Weighted Round-Robin Scheduling for Data Centers," 2018 International Conference on Advanced Computation and Telecommunication (ICACAT), Bhopal, India, 2018, pp. 1-8, doi: 10.1109/ICACAT.2018.8933588.
+基于马尔可夫链模型的数据中心分布式加权轮询调度研究
+
+来自 <https://ieeexplore.ieee.org/document/8933588> 
+WRR的问题是，在调度程序检查队列并按队列顺序对调度进行线程化的每一轮中，它都会为循环排序维护一个全局队列。在DWRR中，线程不能在每个回合中以相似的顺序运行，但是只有在其每回合的总运行时间与权重成正比的情况下，它们才能以随机次数随机运行。它还为每个数据中心分配一个round_number，最初为零，并为线程的权重定义舍入片段。在DWRR中，无论如何，回合是系统中每个线程完成其回合片之一的最短时间。
+
+A. Soni, J. Ermont and J. -L. Scharbarg, "Impact of frame size and deadlines on WRR scheduling in a switched Ethernet network with critical and non-critical flows," 2020 25th IEEE International Conference on Emerging Technologies and Factory Automation (ETFA), Vienna, Austria, 2020, pp. 321-328, doi: 10.1109/ETFA46521.2020.9211962.
+
+帧大小和期限对具有关键流和非关键流的交换以太网网络中WRR调度的影响
+
+来自 <https://ieeexplore.ieee.org/document/9211962> 
+
+
+我们调查在这种环境下经典WRR的有用性。[5]中的作品相似，但不能在这种情况下应用，因为它没有考虑最坏情况下的延迟分析。我们提出一种在关键流和非关键流之间有效共享网络带宽的方法。我们的目标是最大化非关键流的最坏情况带宽，同时尊重关键流的延迟约束。因此，我们提出了一种启发式方法，将关键流分配到一个或多个类别中，从而降低了它们的带宽需求，并最终增加了非关键流的剩余带宽。由于一类中流的带宽和延迟受分配给不同类的权重的影响，因此我们还进行了详尽的搜索以找到满足给定流约束的权重分布。最后，我们通过工业案例研究表明，当要考虑帧长度和截止时间各不相同的流量时，WRR可能不是最佳选择。
+
+S. M. Tabatabaee, J. -Y. Le Boudec and M. Boyer, "Interleaved Weighted Round-Robin: A Network Calculus Analysis," 2020 32nd International Teletraffic Congress (ITC 32), Osaka, Japan, 2020, pp. 64-72, doi: 10.1109/ITC3249928.2020.00016.
+交错加权轮循：网络演算分析
+
+来自 <https://ieeexplore.ieee.org/document/9355548> 
+
+加权轮询（WRR）由于其简单性，经常用于调度数据包或任务。使用WRR，可以连续服务与分配给流的权重相等的多个数据包，从而导致突发服务。交错加权轮询（IWRR）是减轻这种影响的一种变体。我们感兴趣的是找到使用IWRR获得的最坏情况延迟的界限。为此，我们使用网络演算方法，并为IWRR找到严格的服务曲线。使用函数的伪逆获得结果。我们表明，严格的服务曲线是可获得的最佳曲线，并且对于恒定大小的数据包流，从中得出的延迟边界是紧密的（即，最坏的情况）。此外，IWRR严格服务曲线主导了先前发布的WRR严格服务曲线。
+
+
+一种先进的加权轮循调度算法
+
+来自 <https://dl.acm.org/doi/abs/10.1145/3437120.3437304> 
+
+ 
